@@ -369,15 +369,27 @@ html,body{
     padding-top: 150px;
 }
 
+.rider__content{
+    display: flex;
+    justify-content: space-between;
+}
+
 .rider-top{
+    font-family: 'Gotham Pro' sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.05em;
     padding: 10px 20px 7px;
     background: #fff;
     color: #210E09;
     border-radius: 5px;
     display: block;
     margin: 0 auto;
-    max-width: 244px;
+    max-width: 246px;
     margin-bottom: 40px;
+    text-transform: uppercase;
 }
 
 .rider-main-title{
@@ -388,6 +400,117 @@ html,body{
     text-align: center;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    margin-bottom: 80px;
+}
+
+.rider-name{
+    font-family: 'Gotham Pro' sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.riders{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rider-sound-title{
+    font-family: 'Gotham Pro' sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    max-width: 415px;
+    margin-bottom: 50px;
+}
+
+.rider-link + .rider-link{
+    margin-left: 25px;
+}
+
+.rider-links{
+    max-width: 110px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.--show{
+    display: block;
+}
+
+.rider-tab + .rider-tab{
+    margin-top: 20px;
+}
+
+.rider-tab{
+    background: rgba(213, 98, 29, 0.1);
+    border-radius: 5px;
+    padding: 20px 40px;
+    width: 526px;
+    transition: 0.3s;
+}
+
+.rider-tab-title{
+    display: inline-block;
+    font-family: 'Gotham Pro';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.rider-tab-btn{
+    display: inline-block;
+    cursor: pointer;
+    float: right;
+    transition: .3s ;
+    width: 25px;
+    height: 25px;
+}
+
+.rider-tab-img{
+    display: block;
+}
+
+.rider-tab-desc{
+    display: none;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+.--show{
+    display: block;
+    transition: .4s;
+}
+
+.--hide{
+    display: none;
+    transition: .4s;
+}
+
+.rider-tab-btn-hide{
+    transform: rotate(180deg);
+}
+
+.rider-tab-active{
+    background: #D5621D;
+}
+
+.rider-tab-item + .rider-tab-item{
+    margin-top: 20px;
+}
+
+.rider-tab-item{
+    list-style: disc;
 }
 
 /* CONTACTS */
@@ -397,13 +520,20 @@ html,body{
 }
 
 .contacts-top{
+    font-family: 'Gotham Pro' sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
     padding: 10px 20px 7px;
     background: #fff;
     color: #210E09;
     border-radius: 5px;
     margin: 0 auto;
     display: block;
-    max-width: 244px;
+    max-width: 247px;
     margin-bottom: 40px;
 }
 
@@ -452,7 +582,240 @@ html,body{
     margin-bottom: 45px;
 }
 
-.contacts-map-img{
+.contacts-map{
     border: 2px solid #D5621D;
     border-radius: 5px;
+}
+
+.contacts-map>iframe{
+    border-radius: 3px;
+    display: block;
+}
+
+/* CORPORATE */
+
+.corporate__inner{
+    padding-top: 55px;
+}
+
+.corporate-top{
+    padding: 10px 20px 7px;
+    background: #fff;
+    color: #210E09;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-family: 'Gotham Pro' sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    margin: 0 auto;
+    display: block;
+    max-width: 255px;
+}
+
+.corporate-title{
+    font-family: 'Gotham Pro' sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+
+.corporates-title{
+    font-family: 'Gotham Pro' sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 100px;
+}
+
+.corporates{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+.corporates__card-img{
+    display: block;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+.corporates__card-text{
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    max-width: 376px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.aboutEvents-title{
+    font-family: 'Gotham Pro' sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 100px;
+}
+
+.aboutEvents__list{
+    max-width: 636px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.aboutEvents__list-item + .aboutEvents__list-item{
+    margin-top: 20px;
+}
+
+.aboutEvents__list-item{
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+    list-style: square;
+}
+
+.aboutEvents__list-item::marker{
+    color: #D5621D;
+}
+
+/* GALERY */
+
+.galery-top, .poster-top{
+    font-family: 'Gotham Pro' sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    padding: 10px 20px 7px;
+    text-transform: uppercase;
+    background: #fff;
+    color: #210E09;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    max-width: 251px;
+    margin-top: 55px;
+}
+
+.galery-title, .poster-title{
+    font-family: 'Gotham Pro' sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 40px 0 100px;
+}
+
+.galery__content,
+.poster__content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.galery-item + .galery-item + .galery-item + .galery-item + .galery-item,
+.poster__item + .poster__item + .poster__item + .poster__item + .poster__item{
+    margin-top: 25px;
+}
+
+.galery-item-img{
+    display: block;
+}
+
+.galery-item-hover{
+    margin-top: -350px;
+    width: 306px;
+    height: 350px;
+    opacity: 0;
+    transition: .2s;
+    display: block;
+}
+
+.galery-item-hover:hover{
+    opacity: 1;
+}
+
+.galery-item-hover-img{
+    display: block;
+}
+
+/* POSTER */
+
+.poster__hover{
+    opacity: 0;
+    margin-top: -350px;
+    width: 306px;
+    height: 350px;
+    background: rgba(33, 14, 9, .9);
+    position: relative;
+    transition: .2s;
+}
+
+.poster__hover{
+    margin-top: -350px;
+}
+
+.poster-img{
+    display: block;
+}
+
+.poster__hover:hover,
+.poster__hover-link:hover{
+    opacity: 1;
+}
+
+.poster__hover-link{
+    padding-top: 188px;
+    display: block;
+}
+
+.poster-date{
+    padding: 8px 15px;
+    background: #D5621D;
+    border-radius: 5px;
+    display: block;
+    margin-left: 35px;
+    max-width: 180px;
+}
+
+.poster-name{
+    font-family: 'Gotham Pro' sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-left: 35px;
+    margin-top: 17px;
+}
+
+.poster-price{
+    border: 2px solid #D5621D;
+    border-radius: 5px;
+    padding: 10px 20px 7px;
+    max-width: 87px;
+    margin-left: 35px;
+    margin-top: 15px;
+    font-family: 'Gotham Pro' sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
