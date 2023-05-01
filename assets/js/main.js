@@ -1,3 +1,38 @@
+// BURGER
+
+document.getElementById('burger-btn-open').addEventListener('click', function(){
+    document.getElementById('burger__menu').classList.add('--show');
+});
+document.getElementById('burger-btn-hide').addEventListener('click', function(){
+    document.getElementById('burger__menu').classList.remove('--show');
+});
+
+document.querySelector('.scrollTo2').addEventListener('click', function(){
+    document.getElementById('burger__menu').classList.remove('--show');
+});
+
+// SCROLL
+
+function scrollTo(element) {
+    window.scroll({
+        left: 0,
+        top: element.offsetTop,
+        behavior: 'smooth'
+    })
+}  
+
+var button1 = document.querySelector('.scrollTo1');
+var button2 = document.querySelector('.scrollTo2');
+
+var kitchen = document.querySelector('#kitchen');
+
+button1.addEventListener('click' , () => {
+    scrollTo(kitchen);
+});
+button2.addEventListener('click' , () => {
+    scrollTo(kitchen);
+});
+
 // TABS
 
 const tabItem = document.querySelectorAll('.tabs-btn');
@@ -28,10 +63,15 @@ function open(evt){
 
 var swiper = new Swiper(".kitchen__swiper", {
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
-  });
+    breakpoints:{
+        1320: {
+            slidesPerView: 2
+        },
+    }
+});
 
 // RIDER
 
