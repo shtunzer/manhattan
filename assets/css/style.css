@@ -29,11 +29,13 @@ button{
     background: transparent;
     border: none;
     color: inherit;
+    cursor: pointer;
 }
 
 .container{
     margin: 0 auto;
-    max-width: 1305px;
+    max-width: 1325px;
+    padding: 0 10px;
 }
 
 html,body{
@@ -129,7 +131,6 @@ html,body{
 
 .tabs-btn{
     text-transform: uppercase;
-    cursor: pointer;
     background: rgba(213, 98, 29, 0.05);
     border-radius: 5px 5px 0px 0px;
     padding: 12px 48.5px 7px;
@@ -195,18 +196,49 @@ html,body{
     text-transform: uppercase;
 }
 
-.kitchen__cards{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.kitchen__more{
+    font-family: 'Gotham Pro' sans-serif;
+    background: #D5621D;
+    border-radius: 5px;
+    padding: 15px 30px;
+    margin: 0 auto;
+    margin-top: 111px;
+    display: block;
+    max-width: 171px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
-.kitchen__card + .kitchen__card + .kitchen__card{
-    margin-top: 55px;
+:root{
+    --swiper-theme-color: #fff;
+    --swiper-navigation-size: 17px;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+    background: #D5621D;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+.swiper-button-next{
+    right: 0;
+}
+.swiper-button-prev{
+    left: 0;
 }
 
 .kitchen__card{
     display: flex;
-    margin: 0 auto;
+}
+
+.kitchen__card + .kitchen__card{
+    margin-top: 60px;
 }
 
 .kitchen__card-textbox{
@@ -257,41 +289,17 @@ html,body{
     width: 350px;
 }
 
-.kitchen__more{
-    font-family: 'Gotham Pro' sans-serif;
-    background: #D5621D;
-    border-radius: 5px;
-    padding: 15px 30px;
-    margin: 0 auto;
-    margin-top: 111px;
-    display: block;
-    max-width: 171px;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 150%;
-    text-align: center;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+.swiper-slide{
+    width: 100%;
 }
 
-:root{
-    --swiper-theme-color: #fff;
-    --swiper-navigation-size: 17px;
+.swiper-wrapper{
+    margin-left: 80px;
 }
 
-.swiper-button-next,
-.swiper-button-prev{
-    background: #D5621D;
-    border-radius: 5px;
-    width: 50px;
-    height: 50px;
-}
-
-.swiper-button-next{
-    right: 0;
-}
-.swiper-button-prev{
-    left: 0;
+.slide-media-2,
+.slide-media-3{
+    display: none;
 }
 
 /* EVENTS AND TOURISTS */
@@ -470,7 +478,6 @@ html,body{
 
 .rider-tab-btn{
     display: inline-block;
-    cursor: pointer;
     float: right;
     transition: .3s ;
     width: 25px;
@@ -818,4 +825,382 @@ html,body{
     text-align: center;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+}
+
+/* BURGER */
+
+.burger-btn{
+    display: none;
+}
+
+.burger-span + .burger-span{
+    margin-top: 8px;
+}
+
+.burger-span{
+    width: 34px;
+    height: 2px;
+    background: #D5621D;
+    display: block;
+    border-radius: 3px;
+}
+
+.burger__menu{
+    transform: translateX(100%);
+    height: 100vh;
+    transition: linear all .2s;
+    position: fixed;
+    z-index: 15;
+    right: 0;
+    left: 0;
+    top: 0;
+    width: 280px;
+    margin-left: auto;
+    background: #210E09;
+}
+
+.burger__menu.--show{
+    transform: translateX(0%);
+}
+
+.burger__menu-btn{
+    display: block;
+    margin: 40px auto;
+}
+
+.burger__list-link{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.burger__list-btn{
+    display: block;
+    margin: 30px auto 0;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    border: 2px solid #D5621D;
+    border-radius: 5px;
+}
+
+/* MEDIA */
+
+@media (max-width: 1320px){
+    .firstScreen__preview{
+        margin: 0 auto;
+    }
+    .swiper-wrapper{
+        margin-left: 0;
+    }
+    .kitchen__card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .firstScreen__inner{
+        display: block;
+    }
+    .tabs__content,
+    .tabs{
+        max-width: 416.81px;
+        margin: 0 auto;
+    }
+    .tabs{
+        margin-top: 30px;
+    }
+    .contacts__content{
+        display: block;
+    }
+    .contacts__textbox{
+        max-width: 500px;
+        margin: 0 auto 30px;
+    }
+    .contacts-map{
+        max-width: 864px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1300px){
+    .poster__item + .poster__item + .poster__item + .poster__item,
+    .galery-item + .galery-item + .galery-item + .galery-item{
+        margin-top: 25px;
+    }
+    .poster__content,
+    .galery__content{
+        grid-template-columns: repeat(3,1fr);
+        max-width: 940px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1230px){
+    .events-tourists-img{
+        display: none;
+    }
+}
+
+@media (max-width: 990px){
+    .rider__content{
+        display: block;
+    }
+    .riders{
+        max-width: 415px;
+        margin: 0 auto;
+    }
+    .rider-sound-title{
+        margin: 50px auto 50px;
+    }
+    .rider-tab{
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 980px){
+    .poster__item + .poster__item + .poster__item,
+    .galery-item + .galery-item + .galery-item{
+        margin-top: 25px;
+    }
+    .poster__content,
+    .galery__content{
+        grid-template-columns: repeat(2,1fr);
+        max-width: 632px;
+    }
+}
+
+@media (max-width: 960px){
+    .burger-btn{
+        display: unset;
+    }
+    .header__list,
+    .header__btn{
+        display: none;
+    }
+}
+
+@media (max-width: 900px){
+    .firstScreen__preview{
+        max-width: 600px;
+    }
+    .contacts-map{
+        max-width: 604px;
+    }
+    .map{
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 800px){
+    .events__inner{
+        display: block;
+    }
+    .events-text,
+    .tourists-text{
+        margin: 0 auto 35px;
+    }
+    .events-link{
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 740px){
+    .corporates{
+        display: block;
+    }
+}
+
+@media (max-width: 700px){
+    .aboutEvents__list{
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 660px){
+    .slide-media-1{
+        display: none;
+    }
+    .slide-media-2{
+        display: unset;
+    }
+    .kitchen__card{
+        flex-direction: column;
+    }
+    .kitchen__card-img{
+        width: 240px;
+        height: 240px;
+    }
+    .kitchen__card-textbox{
+        padding-left: 0;
+        padding-top: 20px;
+        max-width: 240px;
+    }
+    .kitchen__card-description{
+        max-width: 240px;
+    }
+    .kitchen__card-title{
+        display: inline-block;
+        max-width: 148px;
+    }
+    .kitchen__card-price{
+        margin-left: 0;
+    }
+    .poster__item + .poster__item,
+    .galery-item + .galery-item{
+        margin-top: 25px;
+    }
+    .poster__content,
+    .galery__content{
+        grid-template-columns: repeat(1,1fr);
+        max-width: 306px;
+    }
+}
+
+@media (max-width: 640px){
+    .firstScreen__preview{
+        max-width: 400px;
+    }
+    .firstScreen__preview-title{
+        font-size: 28px;
+    }
+    .firstScreen__preview{
+        max-width: 400px;
+    }
+    .contacts__textbox{
+        max-width: 400px;
+    }
+    .contacts-map{
+        max-width: 404px;
+    }
+    .map{
+        max-width: 400px;
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 570px){
+    .rider-tab{
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 540px){
+    .footer__inner{
+        display: block;
+        text-align: center;
+    }
+    .footer__copy{
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px){
+    .aboutEvents__list{
+        max-width: 300px;
+    }
+    .aboutEvents__list-item{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 460px){
+    .firstScreen__preview{
+        max-width: 310px;
+        max-height: 300px;
+        padding-top: 120px;
+    }
+    .firstScreen__preview-title{
+        font-size: 18px;
+    }
+    .tabs,
+    .tabs__content{
+        max-width: 285px;
+    }
+    .tab__content-img{
+        width: 130px;
+    }
+    .tabs__content{
+        padding: 20px 5px;
+    }
+    .tabs-btn{
+        padding: 12px 20px 7px;
+        width: 140px;
+    }
+}
+
+@media (max-width: 440px){
+    .rider-tab{
+        max-width: 300px;
+    }
+    .riders{
+        display: block;
+    }
+    .rider-sound-img{
+        display: block;
+        margin: 30px auto 0;
+    }
+    .contacts__textbox{
+        max-width: 300px;
+    }
+    .contacts-map{
+        max-width: 304px;
+    }
+    .map{
+        max-width: 300px;
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 400px){
+    .events-text,
+    .tourists-text{
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 390px){
+    .kitchen__card-img{
+        width: 190px;
+        height: 190px;
+    }
+    .kitchen__card-textbox{
+        max-width: 190px;
+    }
+    .kitchen__card-description{
+        max-width: 190px;
+    }
+    .kitchen__card-title{
+        max-width: 140px;
+        display: block;
+    }
+    .kitchen__card-price{
+        display: inline-block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .kitchen__card-weight{
+        max-width: 50px;
+        display: inline-block;
+        margin-left: 20px;
+    }
+    .kitchen__more{
+        margin-top: 40px;
+    }
+    .footer__copy{
+        max-width: 320px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        line-height: 140%;
+    }
+}
+
+@media (max-width: 370px){
+    .corporates__card-text{
+        font-size: 16px;
+    }
+    .aboutEvents__list{
+        max-width: 280px;
+    }
 }
